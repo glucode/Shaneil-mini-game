@@ -15,7 +15,7 @@ struct HomeView: View {
             ZStack{
                 if let model = homeData.displayPhotoData{
                     if model.isEmpty{
-                        Text("\(homeData.score)")
+                        Text("Your final score is \(homeData.score)")
                     } else {
                         ForEach(model.reversed()) { model in
                         CardView(homeViewModel: model, homeData: homeData)
@@ -82,7 +82,10 @@ struct CardView: View {
                 VStack{
                     Image(homeViewModel.image)
                         .resizable()
+                        .aspectRatio(contentMode: .fill)
                         .frame(width: 350, height: 550)
+
+
                     cardText.padding(.horizontal, 8)
                         .padding(.bottom)
 
@@ -94,7 +97,7 @@ struct CardView: View {
 
         }
         .offset(x: offset)
-        .rotationEffect(.init(degrees: getRotation(angle: 8)))
+        .rotationEffect(.init(degrees: getRotation(angle: 12)))
         .contentShape(Rectangle().trim(from: 0, to: endSwipe ? 0 : 1))
         .gesture(
             DragGesture()

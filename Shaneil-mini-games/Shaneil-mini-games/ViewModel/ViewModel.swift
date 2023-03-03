@@ -15,11 +15,11 @@ class HomeViewModel: ObservableObject {
 
     init(){
         photoData = [
-            Model(image: "back1", question: "question 1", answer: false),
-            Model(image: "back2", question: "question 2", answer: false),
-            Model(image: "back4", question: "question 3", answer: true),
-            Model(image: "back5", question: "question 4", answer: false),
-            Model(image: "backgroundPlace", question: "question 5", answer: true),
+            Model(image: "peurgot", question: "Logo: Peugoet?", answer: true),
+            Model(image: "timberland", question: "Logo: Greencross?", answer: false),
+            Model(image: "tinder", question: "Logo: Vodacom?", answer: false),
+            Model(image: "vodacom", question: "Logo: Cell C?", answer: false),
+            Model(image: "wiki", question: "Logo: Woolworths?", answer: false),
         ]
         displayPhotoData = photoData
     }
